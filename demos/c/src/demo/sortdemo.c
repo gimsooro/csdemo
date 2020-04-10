@@ -7,12 +7,21 @@
 
 #include "sortdemo.h"
 
+/*
+    Prints an int array
+*/
 void printIntArray(int * array, int len)
 {
     for (int i = 0; i < len; i++)
         printf("item[%d]: %d\n", i, array[i]);
 }
 
+/*
+    Reads file and places found int array and length of array into given variables
+
+    Returns 0 on success.
+    Returns -1 if error found (file or memory).
+*/
 int readIntFile(int ** array, int * len, char * fileName)
 {
     FILE * filePtr = NULL;
@@ -26,12 +35,12 @@ int readIntFile(int ** array, int * len, char * fileName)
     int * newArray = NULL;
     int newLen = 0;
 
+    // Get file contents
     filePtr = fopen(fileName, "r");
 
     if (!filePtr)
         return -1;
 
-    // Get file contents
     currChar = getc(filePtr);
     while (currChar != EOF)
     {
@@ -87,7 +96,7 @@ void sortIntDemo(char * sampleFile)
     printIntArray(array, len);
     printf("\n");
 
-    bubbleSort((void**)array, len, (*intCompare));
+    bubbleSort((void**)&array, len, (*intCompare));
 
     printf("After:\n");
     printIntArray(array, len);
