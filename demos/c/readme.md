@@ -11,3 +11,7 @@ How to Run:
 How to Clean Up:
 
 	- type  make clean  in the root directory.
+
+Sort Algorithms:
+
+- bubblesort.c *(in progress)*
