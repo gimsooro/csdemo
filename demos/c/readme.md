@@ -14,4 +14,4 @@ How to Clean Up:
 
 Sort Algorithms:
 
-- bubblesort.c *(in progress)*
+- bubblesort *(in progress)*
