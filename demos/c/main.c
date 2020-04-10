@@ -4,7 +4,13 @@
 
 int main (int argc, char * argv[])
 {
-    sortDemo();
+    if (argc != 2)
+    {
+        fprintf(stderr, "usage: %s <file>\n", argv[0]);
+        return 0;
+    }
+
+    sortIntDemo(argv[1]);
 
     return 0;
 }

@@ -3,7 +3,9 @@
 
 /*
     Performs a demonstration showcasing different sort algorithms.
+
+    Int variation.
 */
-void sortDemo();
+void sortIntDemo(char * sampleFile);
 
 #endif

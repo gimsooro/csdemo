@@ -6,7 +6,8 @@ How to Compile:
 
 How to Run:
 
-	- type  ./demo  in the root directory.
+	- type  ./demo <file>  in the root directory.
+    - where <file> is a set of data to demo through.
 
 How to Clean Up:
 
