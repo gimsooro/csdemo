@@ -4,7 +4,7 @@
 
 #include "compare.h"
 #include "bubblesort.h"
-
+#include "selection.h"
 #include "sortdemo.h"
 
 /*
@@ -92,11 +92,34 @@ void sortIntDemo(char * sampleFile)
         return;
     }
 
+    printf("Bubble Sort:\n");
+
     printf("Before:\n");
     printIntArray(array, len);
     printf("\n");
 
     bubbleSort((void**)&array, len, (*intCompare));
+
+    printf("After:\n");
+    printIntArray(array, len);
+    printf("\n");
+
+    free(array);
+
+    if (readIntFile(&array, &len, sampleFile) != 0)
+    {
+        fprintf(stderr, "Unable to read file.\n");
+
+        return;
+    }
+
+    printf("Selection Sort:\n");
+
+    printf("Before:\n");
+    printIntArray(array, len);
+    printf("\n");
+
+    selectionSort(array, len);
 
     printf("After:\n");
     printIntArray(array, len);
